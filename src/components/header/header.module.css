@@ -1,0 +1,9 @@
+.layout {
+    /*min-width: 1280px;*/
+    width: 100vw;
+    height: 64px;
+    background-color: var(--color-base-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

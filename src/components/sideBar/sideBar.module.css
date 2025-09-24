@@ -1,0 +1,22 @@
+.layout {
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--color-neutral-300);
+}
+
+.image {
+    width: 231px;
+    height: 168px;
+}
+
+.text {
+    text-align: center;
+    margin-top: 24px;
+}
