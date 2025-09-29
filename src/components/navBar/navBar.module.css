@@ -1,9 +1,10 @@
 .layout {
-    width: 204px;
+    width: 203px;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--color-neutral-300);
+    background-color: var(--color-neutral-100);
+    border-right: 1px solid var(--color-neutral-300);
 }
 
 .incoming {
@@ -15,6 +16,9 @@
     border-radius: 8px;
     margin-top: 24px;
     flex-direction: row;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-base);
 }
 
 .icon {
@@ -24,7 +28,7 @@
 }
 
 .text {
-    font-family: 'Source-Sans-3-bold';  
+    font-family: 'Source Sans 3 SemiBold'; 
     color: var(--color-neutral-0);
     font-weight: 600;
     margin: 8px;

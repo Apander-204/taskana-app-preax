@@ -2,11 +2,11 @@ import styles from './navBar.module.css'
 
 export default function NavBar() {
     return(
-        <div className={styles.layout}>
-            <div className={styles.incoming}>
+        <nav className={styles.layout}>
+            <a href="#" className={styles.incoming}>
                 <img src='./public/icon1.png' className={styles.icon}></img>
                 <p className={styles.text}>Входящие</p>
-            </div>
-        </div>
+            </a>
+        </nav>
     );
 }

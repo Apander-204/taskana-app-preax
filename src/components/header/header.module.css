@@ -1,9 +1,10 @@
 .layout {
-    /*min-width: 1280px;*/
-    width: 100vw;
-    height: 64px;
+    width: 100%;
+    min-height: 64px;
     background-color: var(--color-base-black);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    flex-shrink: 0;
 }
