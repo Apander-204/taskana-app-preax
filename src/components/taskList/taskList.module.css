@@ -19,7 +19,16 @@
     font-family: 'Source Sans 3 Bold'; 
     font-weight: 700;
     font-size: 24px;
+}
+
+.light .subtitle {
+    transition: all 0.2s ease;
     color: var(--color-neutral-800);
+}
+
+.dark .subtitle {
+    transition: all 0.2s ease;
+    color: var(--color-dark-neutral-800);
 }
 
 .p {
@@ -29,9 +38,29 @@
     color: var(--color-neutral-800);
 }
 
+.light .p {
+    transition: all 0.2s ease;
+    color: var(--color-neutral-800);
+}
+
+.dark .p {
+    transition: all 0.2s ease;
+    color: var(--color-dark-neutral-800);
+}
+
 .image {
     width: 463px;
     height: 319px;
     margin-top:2.5rem;
     max-width: 100%;
+}
+
+.light .image {
+    transition: all 0.2s ease;
+    fill: var(--color-neutral-0);
+}
+
+.dark .image {
+    transition: all 0.2s ease;
+    fill: var(--color-dark-neutral-0);
 }

@@ -1,0 +1,74 @@
+.layout {
+    width: 76px;
+    height: 40px;
+    background-color: var(--color-base-800);
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.sun {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.light .sun {
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-dark-base-default);
+    background-color: var(--color-primary-400);
+}
+
+.light .sun:hover {
+    transition: all 0.2s ease;
+    background-color: var(--color-base-white);
+}
+
+.light .sun path {
+    transition: all 0.2s ease;
+    fill: var(--color-base-white);
+}
+
+.light .sun:hover path {
+    transition: all 0.2s ease;
+    fill: var(--color-base-900);
+}
+
+.moon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.dark .moon {
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-dark-base-default);
+    background-color: var(--color-primary-400);
+}
+
+.dark .moon:hover {
+    transition: all 0.2s ease;
+    background-color: var(--color-base-white);
+}
+
+
+.dark .moon path {
+    transition: all 0.2s ease;
+    fill: var(--color-base-white);
+}
+
+.dark .moon:hover path {
+    transition: all 0.2s ease;
+    fill: var(--color-base-900);
+}

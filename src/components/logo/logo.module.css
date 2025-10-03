@@ -1,5 +1,11 @@
-.plus {
+.logo {
     width: 126px;
     height: 40px;
     margin-left: 16px;
+    border-radius: 8px;
+}
+
+.logo:focus {
+    padding: 4px;
+    border: 2px solid var(--color-base-white);
 }

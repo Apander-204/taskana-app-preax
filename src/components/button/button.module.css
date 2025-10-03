@@ -3,12 +3,32 @@
     height: 40px;
     border-radius: 8px;
     background-color: var(--color-primary-400);
-    margin-right: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     border: none;
+}
+
+.button:hover {
+    transition: all 0.2s ease;
+    background-color: var(--color-primary-500);
+}
+
+.button:focus {
+    transition: all 0.2s ease;
+    background-color: var(--color-primary-500);
+}
+
+.button:active {
+    transition: all 0.2s ease;
+    background-color: var(--color-primary-300);
+}
+
+.button:disabled {
+    transition: all 0.2s ease;
+    background-color: #D5101080;
+    box-shadow: 2 2 4 0 rgba(0, 0, 0, 0.5) inset;
 }
 
 .image {

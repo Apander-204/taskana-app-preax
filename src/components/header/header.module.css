@@ -4,7 +4,14 @@
     background-color: var(--color-base-black);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: sticky;
     flex-shrink: 0;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }

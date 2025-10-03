@@ -5,8 +5,19 @@
     flex-direction: column;
     overflow-y: auto;
     min-height: 0;
+    
+}
+
+.light {
+    transition: all 0.2s ease;
     background-color: var(--color-neutral-100);
     border-left: 1px solid var(--color-neutral-300);
+}
+
+.dark {
+    transition: all 0.2s ease;
+    background-color: var(--color-dark-neutral-100);
+    border-left: 1px solid var(--color-dark-neutral-300);
 }
 
 .content {
@@ -24,7 +35,22 @@
     height: 168px;
 }
 
+.dark .image {
+    transition: all 0.2s ease;
+    fill: var(--color-dark-neutral-0);
+}
+
 .text {
     text-align: center;
     margin-top: 24px;
+}
+
+.light .text {
+    transition: all 0.2s ease;
+    color: var(--color-neutral-800);
+}
+
+.dark .text {
+    transition: all 0.2s ease;
+    color: var(--color-dark-neutral-800);
 }
