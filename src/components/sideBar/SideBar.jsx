@@ -7,8 +7,8 @@ export default function SideBar() {
     const {theme} = useTheme();
 
     return(
-        <div className={`${styles.layout} ${styles[theme]}`}>
+        <aside className={`${styles.layout} ${styles[theme]}`}>
             <Statictics className={styles.statictic} />
-        </div>
+        </aside>
     );
 }

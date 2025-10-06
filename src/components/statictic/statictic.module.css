@@ -3,9 +3,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     min-height: 0;
-    
+    overflow-y: auto;
 }
 
 .light {
@@ -28,11 +27,14 @@
   align-items: center;
   justify-content: center;
   min-height: min-content;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .image {
     width: 231px;
     height: 168px;
+    flex-shrink: 0;
 }
 
 .dark .image {
@@ -41,8 +43,10 @@
 }
 
 .text {
+    width: 352px;
     text-align: center;
     margin-top: 24px;
+    box-sizing: border-box;
 }
 
 .light .text {

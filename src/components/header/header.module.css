@@ -6,6 +6,7 @@
     align-items: center;
     position: sticky;
     flex-shrink: 0;
+    top: 0;
 }
 
 .right {

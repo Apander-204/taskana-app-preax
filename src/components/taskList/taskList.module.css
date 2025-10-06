@@ -7,18 +7,21 @@
 }
 
 .content {
-  flex:1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: min-content;
+  margin-bottom: 24px;
+  padding-bottom: calc(20px + 56px);
 }
 
 .subtitle {
     font-family: 'Source Sans 3 Bold'; 
     font-weight: 700;
     font-size: 24px;
+    text-align: center;
 }
 
 .light .subtitle {
@@ -36,6 +39,7 @@
     font-weight: 400;
     font-size: 18px;
     color: var(--color-neutral-800);
+    text-align: center;
 }
 
 .light .p {

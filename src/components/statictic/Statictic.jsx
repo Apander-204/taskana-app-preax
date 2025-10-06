@@ -10,9 +10,7 @@ export default function Statictics() {
         <div className={`${styles.layout} ${styles[theme]}`}>
             <div className={styles.content}>
                 <div className={styles.image}>
-                    {
-                        theme=='light' ? (<Illustration name='book' />) : (<Illustration name='darkbook' />)
-                    }
+                    <Illustration name='book' />
                 </div>
                 <p className={styles.text}>Здесь мы поможем тебе управлять твоими задачами, отслеживать статистику и самочувствие.</p>
             </div>

@@ -8,32 +8,34 @@
     justify-content: center;
     gap: 8px;
     border: none;
+    cursor: pointer;
 }
 
 .button:hover {
-    transition: all 0.2s ease;
     background-color: var(--color-primary-500);
 }
 
 .button:focus {
-    transition: all 0.2s ease;
     background-color: var(--color-primary-500);
 }
 
 .button:active {
-    transition: all 0.2s ease;
     background-color: var(--color-primary-300);
 }
 
 .button:disabled {
-    transition: all 0.2s ease;
     background-color: #D5101080;
     box-shadow: 2 2 4 0 rgba(0, 0, 0, 0.5) inset;
 }
 
 .image {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    fill: var(--color-base-white);
+}
+
+.image path {
+    fill: var(--color-base-white);
 }
 
 .text {

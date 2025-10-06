@@ -1,5 +1,6 @@
 import styles from './button.module.css'
 import { useTheme } from '../contexts/ThemeContext';
+import Icon from '../icon/Icon';
 
 export default function Button() {
 
@@ -7,7 +8,7 @@ export default function Button() {
 
     return(
         <button className={styles.button}>
-            <img src="./public/plus.png" className={styles.image}></img>
+            <Icon name='plussecond' className={styles.image} />
             <p className={styles.text}>Создать</p>
         </button>
     );

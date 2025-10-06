@@ -12,9 +12,7 @@ export default function TaskList() {
                 <h2 className={styles.subtitle}>Все твои задачи организованы как надо</h2>
                 <p className={styles.p}>Отличная работа! Ты большой молодец!</p>
                 <div className={styles.image}>
-                    {
-                        theme=='light' ? (<Illustration name='task'/>) : (<Illustration name='darktask'/>)
-                    }
+                    <Illustration name='task'/>
                 </div>
             </div>
         </div>
