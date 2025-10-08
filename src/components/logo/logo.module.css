@@ -1,12 +1,12 @@
 .logo {
     width: 126px;
     height: 40px;
-    margin-left: 16px;
     border-radius: 8px;
     cursor: pointer;
+    padding-left: 7px;
 }
 
 .logo:focus {
-    padding: 4px;
-    border: 2px solid var(--color-base-white);
+    outline: 2px solid var(--color-base-white);
+    outline-offset: 4px;
 }

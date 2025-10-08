@@ -1,57 +1,33 @@
 .footer {
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 56px;
+    padding-block: 1rem;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--color-neutral-0);
 }
 
 .text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-neutral-600);
 }
 
 .a {
-    border-radius: 4px;
-}
-
-.light .text {
+    padding: 2px;
+    border-radius: 8px;
+    border: 2px solid transparent;
     color: var(--color-neutral-600);
+    text-decoration: underline;
 }
 
-.light .a {
-    color: var(--color-neutral-600);
-}
-
-.light .a:hover {
+.a:hover {
     color: var(--color-neutral-800);
+    text-decoration: underline;
 }
 
-.light .a:focus {
-    outline: none;
+.a:focus-visible {
     color: var(--color-neutral-800);
-    box-shadow: 
-        0 0 0 2px var(--color-neutral-0),
-        0 0 0 4px var(--color-neutral-900);
+    border-radius: 8px;
     outline: none;
-}
-
-.dark .text {
-    color: var(--color-dark-neutral-600);
-}
-
-.dark .a {
-    color: var(--color-dark-neutral-600);
-}
-
-.dark .a:hover {
-    color: var(--color-dark-neutral-800);
-}
-
-.dark .a:focus {
-    color: var(--color-dark-neutral-800);
-    box-shadow: 
-        0 0 0 2px var(--color-dark-neutral-0),
-        0 0 0 4px var(--color-dark-neutral-900);
-    outline: none;
+    border: 2px solid var(--color-neutral-900);
 }

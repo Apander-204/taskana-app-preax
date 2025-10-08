@@ -1,30 +1,9 @@
-import { useTheme } from '../../contexts/ThemeContext';
-
 export default function Task() {
-
-    const {theme} = useTheme();
 
     let styles = {
         neutral300: { fill: "var(--color-neutral-300)" },
         neutral900: { fill: "var(--color-neutral-900)" },
     };
-
-    if(theme=='light') {
-        styles = {
-            neutral300: { fill: "var(--color-neutral-300)" },
-            neutral900: { fill: "var(--color-neutral-900)" },
-        }
-    }
-    else {
-        styles = {
-            neutral300: { fill: "var(--color-dark-neutral-300)" },
-            neutral900: { fill: "var(--color-dark-neutral-900)" },
-        }
-    }
-
-    
-
-
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="463" height="319" fill="none">

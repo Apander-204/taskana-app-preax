@@ -1,17 +1,18 @@
 import styles from './mainContainer.module.css'
 import TaskList from '../taskList/TaskList';
-import { useTheme } from '../contexts/ThemeContext';
+import Footer from '../footer/Footer';
 
 export default function MainContainer() {
 
-    const {theme} = useTheme();
-
     return(
-        <main className={`${styles.layout} ${styles[theme]}`}>
-            <div className={styles.header}>
-                <h1 className={styles.title}>Входящие</h1>
+        <main className={styles.layout}>
+            <div className={styles.content}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>Входящие</h1>
+                </div>
+                <TaskList />
             </div>
-            <TaskList className={styles.tasks} />
+            <Footer />
         </main>
     );
 }

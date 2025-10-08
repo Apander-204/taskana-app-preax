@@ -8,10 +8,14 @@
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    margin-right: 24px;
     margin-left: 24px;
     border: none;
     cursor: pointer;
+}
+
+.layout:focus-visible {
+    outline: 2px solid var(--color-base-white);
+    outline-offset: 2px;
 }
 
 .sun {
@@ -25,7 +29,7 @@
 
 .light .sun {
     transition: all 0.2s ease;
-    box-shadow: var(--shadow-dark-base-default);
+    box-shadow: var(--shadow-base-default);
     background-color: var(--color-primary-400);
 }
 
@@ -55,7 +59,7 @@
 
 .dark .moon {
     transition: all 0.2s ease;
-    box-shadow: var(--shadow-dark-base-default);
+    box-shadow: var(--shadow-base-default);
     background-color: var(--color-primary-400);
 }
 

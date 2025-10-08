@@ -6,8 +6,11 @@ export function ThemeProvider({ children }) {
     const [theme, setTheme] = useState('light');
     
     const switchTheme = (e) => {
-        if (e=='sun') setTheme('light');
-        else if (e=='moon') setTheme('dark');
+
+        const newTheme = e === 'sun' ? 'light' : 'dark';
+        setTheme(newTheme);
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
     };
 
     return (

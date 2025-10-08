@@ -1,66 +1,39 @@
 .layout {
-    width: 203px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.light {
+    width: 204px;
+    padding: 1.5rem 1rem;
     background-color: var(--color-neutral-100);
     border-right: 1px solid var(--color-neutral-300);
-}
-
-.dark {
-    background-color: var(--color-dark-neutral-100);
-    border-right: 1px solid var(--color-dark-neutral-300);
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-shrink: 0;
 }
 
 .incoming {
     width: 172px;
     height: 40px;
+    padding: 8px;
     display: flex;
     align-items: center;
     border-radius: 8px;
-    margin-top: 24px;
+    gap: 8px;
     flex-direction: row;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.dark .incoming {
-    background-color: var(--color-dark-neutral-800);
-    box-shadow: var(--shadow-dark-base-default);
-}
-
-.dark .incoming:hover {
-    background-color: var(--color-dark-neutral-700);
-    box-shadow: var(--shadow-dark-base-default);
-}
-
-.light .incoming {
     background-color: var(--color-neutral-800);
-    box-shadow: var(--shadow-base-default);
+    font-family: 'Source Sans 3 SemiBold'; 
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--color-neutral-0);
 }
 
-.light .incoming:hover {
+.incoming:hover {
     background-color: var(--color-neutral-700);
-    box-shadow: var(--shadow-base-default);
 }
 
-.light .incoming:focus {
+.incoming:focus-visible {
+    outline: 2px solid var(--color-neutral-900);
+    outline-offset: 2px;
     background-color: var(--color-neutral-700);
-    box-shadow: 
-        0 0 0 2px var(--color-neutral-0),
-        0 0 0 4px var(--color-neutral-900);
-    outline: none;
-}
-
-.dark .incoming:focus {
-    background-color: var(--color-dark-neutral-700);
-    box-shadow: 
-        0 0 0 2px var(--color-dark-neutral-0),
-        0 0 0 4px var(--color-dark-neutral-900);
-    outline: none;
 }
 
 .icon {
@@ -69,24 +42,6 @@
     margin-left: 8px;
 }
 
-.dark .icon path{
-    fill: var(--color-dark-neutral-0);
-}
-
-.light .icon path{
+.icon path{
     fill: var(--color-neutral-0);
-}
-
-.text {
-    font-family: 'Source Sans 3 SemiBold'; 
-    font-weight: 600;
-    margin: 8px;
-}
-
-.dark .text {
-    color: var(--color-dark-neutral-0);
-}
-
-.light .text {
-    color: var(--color-neutral-0);
 }

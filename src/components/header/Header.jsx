@@ -9,8 +9,8 @@ export default function Header() {
         <header className={styles.layout}>
             <Logo className={styles.logo} tabIndex={0} />
             <div className={styles.right}>
-                <Button className={styles.button} />
-                <ThemeSwitcher className={styles.switcher} />
+                <Button />
+                <ThemeSwitcher />
             </div>
         </header>
     );

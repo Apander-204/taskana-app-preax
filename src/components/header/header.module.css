@@ -1,18 +1,21 @@
 .layout {
-    width: 100%;
-    min-height: 64px;
     background-color: var(--color-base-black);
+    padding: 10px 1.5rem 12px 10px;
     display: flex;
-    align-items: center;
-    position: sticky;
-    flex-shrink: 0;
-    top: 0;
+    height: 64px;
+    box-shadow: var(--shadow-base-default);      
+    z-index: 10; 
+}
+
+.logo:focus-visible {
+    border-radius: 8px;
+    outline: 2px solid var(--color-base-white);
+    outline-offset: 2px;
 }
 
 .right {
-    display: flex;
-    justify-content: flex-end;
     width: 100%;
-    height: 100%;
-    align-items: center;
+    justify-content: flex-end;
+    padding-top: 2px;
+    display: flex;
 }

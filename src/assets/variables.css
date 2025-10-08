@@ -13,19 +13,6 @@
     --color-neutral-800: #1C1C1C;
     --color-neutral-900: #141414;
 
-    /* neutral/dark */
-
-    --color-dark-neutral-0: #141414;
-    --color-dark-neutral-100: #1C1C1C;
-    --color-dark-neutral-200: #262626;
-    --color-dark-neutral-300: #333333;
-    --color-dark-neutral-400: #6C6C6C;
-    --color-dark-neutral-500: #8C8C8C;
-    --color-dark-neutral-600: #BFBFBF;
-    --color-dark-neutral-700: #ECECEC;
-    --color-dark-neutral-800: #FBFBFB;
-    --color-dark-neutral-900: #FFFFFF;
-
     /* Primary */
 
     --color-primary-0: #FFF4F4;
@@ -52,9 +39,24 @@
     --shadow-sm-default: 2 2 4 0 rgba(0, 0, 0, 0.1);
     --shadow-sm-hower: 2 8 12 0 rgba(0, 0, 0, 0.2);
 
-    --shadow-dark-base-default: 2 2 4 0 rgba(0, 0, 0, 0.5);
-    --shadow-dark-base-hower: 2 8 12 0 rgba(0, 0, 0, 0.8);
-    --shadow-dark-sm-default: 2 2 4 0 rgba(0, 0, 0, 0.3);
-    --shadow-dark-sm-hower: 2 8 12 0 rgba(0, 0, 0, 0.6);
+}
 
+[data-theme="dark"] {
+    /* Dark theme */
+    --color-neutral-0: #141414;
+    --color-neutral-100: #1C1C1C;
+    --color-neutral-200: #262626;
+    --color-neutral-300: #333333;
+    --color-neutral-400: #6C6C6C;
+    --color-neutral-500: #8C8C8C;
+    --color-neutral-600: #BFBFBF;
+    --color-neutral-700: #ECECEC;
+    --color-neutral-800: #FBFBFB;
+    --color-neutral-900: #FFFFFF;
+
+    /* Shadows for dark theme */
+    --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    --shadow-base-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.8);
+    --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    --shadow-sm-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.6);
 }

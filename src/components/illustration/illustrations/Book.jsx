@@ -1,29 +1,10 @@
-import { useTheme } from '../../contexts/ThemeContext';
-
 export default function Book() {
-
-    const {theme} = useTheme();
 
     let styles = {
         neutral0: { fill: "var(--color-neutral-0)" },
         neutral300: { fill: "var(--color-neutral-300)" },
         neutral700: { fill: "var(--color-neutral-700)" },
     };
-
-    if(theme=='light') {
-        styles = {
-            neutral0: { fill: "var(--color-neutral-0)" },
-            neutral300: { fill: "var(--color-neutral-300)" },
-            neutral700: { fill: "var(--color-neutral-700)" },
-        }
-    }
-    else {
-        styles = {
-            neutral0: { fill: "var(--color-dark-neutral-0)" },
-            neutral300: { fill: "var(--color-dark-neutral-300)" },
-            neutral700: { fill: "var(--color-dark-neutral-700)" },
-        }
-    }
 
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="233" height="168" fill="none">
