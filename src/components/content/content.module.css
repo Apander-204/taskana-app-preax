@@ -1,5 +1,6 @@
 .layout {
     display: flex;
+    position: relative;
     flex: 1;
     height: calc(100vh - 64px);
     width: 100%;
@@ -7,4 +8,22 @@
     margin-inline: auto;
     overflow: hidden;
     background-color: var(--color-neutral-0);
+}
+
+.edit {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(400px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.edit.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
 }

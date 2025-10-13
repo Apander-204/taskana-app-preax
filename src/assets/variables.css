@@ -32,12 +32,21 @@
     --color-base-900: #141414;
     --color-base-white: #FFFFFF;
 
+    /* Secondary */
+
+    --color-secondary-0: #F5F0FF;
+    --color-secondary-100: #EADFFF;
+    --color-secondary-200: #D9C5FF;
+    --color-secondary-300: #B792FF;
+    --color-secondary-400: #742CFF;
+    --color-secondary-500: #581BCC;
+
     /* Shadows */
 
-    --shadow-base-default: 2 2 4 0 rgba(0, 0, 0, 0.2);
-    --shadow-base-hower: 2 8 12 0 rgba(0, 0, 0, 0.25);
-    --shadow-sm-default: 2 2 4 0 rgba(0, 0, 0, 0.1);
-    --shadow-sm-hower: 2 8 12 0 rgba(0, 0, 0, 0.2);
+    --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    --shadow-base-hower: 2px 8px 12px 0px rgba(0, 0, 0, 0.25);
+    --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    --shadow-sm-hower: 2px 8px 12px 0px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -53,6 +62,20 @@
     --color-neutral-700: #ECECEC;
     --color-neutral-800: #FBFBFB;
     --color-neutral-900: #FFFFFF;
+
+    --color-primary-0: #300B0B;
+    --color-primary-100: #461313;
+    --color-primary-200: #760909;
+    --color-primary-300: #A60C0C;
+    --color-primary-400: #D51010;
+    --color-primary-500: #F25959;
+
+    --color-secondary-0: #261C3C;
+    --color-secondary-100: #441A96;
+    --color-secondary-200: #5500F8;
+    --color-secondary-300: #803EFF;
+    --color-secondary-400: #9D6AFF;
+    --color-secondary-500: #B792FF;
 
     /* Shadows for dark theme */
     --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);

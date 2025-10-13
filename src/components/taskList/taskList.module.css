@@ -1,5 +1,11 @@
+.layout {
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -36,4 +42,79 @@
     display: flex;
     justify-content: center;
     fill: var(--color-neutral-0);
+}
+
+.task {
+    display: flex;
+    width: 100%;
+    min-height: 56px;
+    padding-top: 18px;
+    padding-left: 18px;
+    border-radius: 8px;
+}
+
+.task:hover {
+    background-color: var(--color-neutral-100);
+    box-shadow: var(--shadow-sm-default);
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    appearance: none;
+    border: 1.5px solid var(--color-neutral-400);
+}
+
+.checkbox:hover {
+    border: 1.5px solid var(--color-neutral-800);
+}
+
+.checkbox:focus-visible {
+    border: 1.5px solid var(--color-neutral-800);
+    outline-offset: 0px;
+    outline: 4px solid var(--color-neutral-400);
+}
+
+.chevron {
+    border: 1.5px solid var(--color-secondary-300);
+}
+
+.chevron:hover {
+    border: 1.5px solid var(--color-secondary-500);
+}
+
+.chevron:focus-visible {
+    border: 1.5px solid var(--color-secondary-500);
+    outline-offset: 0px;
+    outline: 4px solid var(--color-secondary-100);
+}
+
+.arrow {
+    border: 1.5px solid var(--color-primary-300);
+}
+
+.arrow:hover {
+    border: 1.5px solid var(--color-primary-500);
+}
+
+.arrow:focus-visible {
+    border: 1.5px solid var(--color-primary-500);
+    outline-offset: 0px;
+    outline: 4px solid var(--color-primary-100);
+}
+
+.tasktitle {
+    color: var(--color-neutral-800);
+    font-size: 18px;
+    padding-left: 18px;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }

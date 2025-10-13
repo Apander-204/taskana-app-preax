@@ -1,13 +1,14 @@
 import styles from './button.module.css'
-import { useTheme } from '../contexts/ThemeContext';
 import Icon from '../icon/Icon';
 
-export default function Button() {
+export default function Button({ setVisible, visible }) {
 
-    const {theme} = useTheme();
+    const changeVisible = () => {
+        setVisible(true);
+    }
 
     return(
-        <button className={styles.button}>
+        <button className={styles.button} onClick={changeVisible} >
             <Icon name='plussecond' className={styles.image} />
             <p className={styles.text}>Создать</p>
         </button>

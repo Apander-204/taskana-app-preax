@@ -2,7 +2,7 @@ import styles from './mainContainer.module.css'
 import TaskList from '../taskList/TaskList';
 import Footer from '../footer/Footer';
 
-export default function MainContainer() {
+export default function MainContainer({tasks}) {
 
     return(
         <main className={styles.layout}>
@@ -10,7 +10,7 @@ export default function MainContainer() {
                 <div className={styles.header}>
                     <h1 className={styles.title}>Входящие</h1>
                 </div>
-                <TaskList />
+                <TaskList tasks={tasks} />
             </div>
             <Footer />
         </main>
