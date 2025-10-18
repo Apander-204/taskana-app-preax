@@ -5,14 +5,13 @@
 
 .container {
     width: 100%;
-    height: 100%;
+    height: 88%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     max-width: 948px;
     margin-block: auto;
-    padding-bottom: 1.5rem;
 }
 
 .content {
@@ -44,11 +43,15 @@
     fill: var(--color-neutral-0);
 }
 
+.test {
+    padding-top: 2px;
+}
+
 .task {
     display: flex;
     width: 100%;
     min-height: 56px;
-    padding-top: 18px;
+    padding-top: 16px;
     padding-left: 18px;
     border-radius: 8px;
 }
@@ -56,6 +59,10 @@
 .task:hover {
     background-color: var(--color-neutral-100);
     box-shadow: var(--shadow-sm-default);
+}
+
+.task:focus {
+    outline: 2px var(--color-neutral-900) solid;
 }
 
 .checkbox {

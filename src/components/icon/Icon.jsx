@@ -6,6 +6,7 @@ import SunIcon from './icons/SunIcon'
 import Minus from './icons/Minus'
 import ArrowTwo from './icons/ArrowTwo'
 import ChevronTop from './icons/ChevronTop'
+import CrossIcon from './icons/CrossIcon'
 
 export default function Icon({ name, ...props }) {
     if (name == 'inbox') return <InboxIcon {...props} />
@@ -16,4 +17,5 @@ export default function Icon({ name, ...props }) {
     if (name == 'minus') return <Minus {...props} />
     if (name == 'arrow') return <ArrowTwo {...props} />
     if (name == 'chevron') return <ChevronTop {...props} />
+    if (name == 'cross') return <CrossIcon {...props} />
 }

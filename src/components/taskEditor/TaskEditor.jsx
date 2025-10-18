@@ -3,7 +3,7 @@ import Icon from '../icon/Icon';
 import GenerateId from '../../utils/GenerateId';
 import { useState } from 'react';
 
-export default function TaskEditor( {setTasks, setVisible} ) {
+export default function TaskEditor( {setTasks, setVisible, inputRef} ) {
 
     const [inputValue, setInputValue] = useState('');
     const disableButton = inputValue.trim() == '';
@@ -28,6 +28,12 @@ export default function TaskEditor( {setTasks, setVisible} ) {
 
     const changeVisible = () => {
         setVisible(false);
+        setInputValue('');
+        setActiveButton(1);
+    }
+
+    const crossClick = () => {
+        setInputValue('');
     }
 
     return(
@@ -39,7 +45,10 @@ export default function TaskEditor( {setTasks, setVisible} ) {
                         <p className={styles.p}>Название</p>
                         <p className={styles.star}>*</p>
                     </div>
-                    <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input}/>
+                    <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input} ref={inputRef}/>
+                    <button className={styles.cross} onClick={crossClick}>
+                        <Icon name="cross" className={styles.crossimg} />
+                    </button>
                 </div>
             </div>
             <div className={styles.priority}>

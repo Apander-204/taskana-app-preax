@@ -3,7 +3,7 @@
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
-    padding-left: 7px;
+    margin-left: 7px;
 }
 
 .logo:focus {
