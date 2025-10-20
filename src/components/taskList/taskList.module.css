@@ -43,15 +43,11 @@
     fill: var(--color-neutral-0);
 }
 
-.test {
-    padding-top: 2px;
-}
-
 .task {
     display: flex;
     width: 100%;
     min-height: 56px;
-    padding-top: 16px;
+    align-items: center;
     padding-left: 18px;
     border-radius: 8px;
 }
@@ -63,6 +59,10 @@
 
 .task:focus {
     outline: 2px var(--color-neutral-900) solid;
+}
+
+.test {
+    margin-top: 2px;
 }
 
 .checkbox {

@@ -1,7 +1,7 @@
 import styles from './appLayout.module.css'
 import Header from '../../components/header/Header';
 import Content from '../../components/content/Content';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function AppLayout() {
 

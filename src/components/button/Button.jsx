@@ -5,7 +5,12 @@ export default function Button({ setVisible, visible, inputRef }) {
 
     const changeVisible = () => {
         setVisible(true);
-        inputRef.current.focus();
+        
+        setTimeout(() => {
+            if (inputRef.current) {
+                inputRef.current.focus();
+            }
+        }, 100);
     }
 
     return(

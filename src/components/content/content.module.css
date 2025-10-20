@@ -10,20 +10,30 @@
     background-color: var(--color-neutral-0);
 }
 
-.edit {
-    position: absolute;
-    height: 100%;
-    right: 0;
-    z-index: 100;
+.mainContent {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
 
+.edit {
+    position: fixed;
+    top: 64px;
+    right: -400px;
+    bottom: 0;
+    width: 400px;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(400px);
-    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease, right 0.4s ease;
+    pointer-events: none;
+    background: var(--color-neutral-0);
 }
 
 .edit.visible {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0px);
+    right: 0;
+    pointer-events: auto;
 }

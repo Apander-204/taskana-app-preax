@@ -1,7 +1,7 @@
 import styles from './taskEditor.module.css'
 import Icon from '../icon/Icon';
 import GenerateId from '../../utils/GenerateId';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function TaskEditor( {setTasks, setVisible, inputRef} ) {
 
@@ -45,7 +45,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef} ) {
                         <p className={styles.p}>Название</p>
                         <p className={styles.star}>*</p>
                     </div>
-                    <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input} ref={inputRef}/>
+                    <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input} ref={inputRef} />
                     <button className={styles.cross} onClick={crossClick}>
                         <Icon name="cross" className={styles.crossimg} />
                     </button>
