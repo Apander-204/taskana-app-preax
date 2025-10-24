@@ -6,13 +6,14 @@ import { useEffect, useRef, useState } from 'react';
 export default function AppLayout() {
 
     const [visible, setVisible] = useState(false);
+    const [action, setAction] = useState('create');
     const inputRef = useRef(null);
 
     return(
 
         <div className={styles.layout}>
-            <Header setVisible={setVisible} visible={visible} inputRef={inputRef}/>
-            <Content visible={visible} setVisible={setVisible} inputRef={inputRef}/>
+            <Header setVisible={setVisible} visible={visible} inputRef={inputRef} setAction={setAction}/>
+            <Content visible={visible} setVisible={setVisible} inputRef={inputRef} action={action} setAction={setAction}/>
         </div>
     );
 }

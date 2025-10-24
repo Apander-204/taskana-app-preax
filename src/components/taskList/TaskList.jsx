@@ -1,7 +1,15 @@
 import styles from './taskList.module.css'
 import Illustration from '../illustration/Illustration';
+import Icon from '../icon/Icon';
 
-export default function TaskList( {tasks} ) {
+export default function TaskList( {tasks, setAction, setActualTask, setVisible, actualTask} ) {
+
+    const openEditMenu = (task) => {
+        setAction('edit');
+        setActualTask(task);
+
+        setVisible(true);
+    }
 
     return(
         <div className={styles.layout}>
@@ -22,6 +30,9 @@ export default function TaskList( {tasks} ) {
                         <div className={styles.task} tabIndex={0}>
                             <input type='checkbox' className={`${styles.checkbox} ${task.priority == 2 ? styles.chevron : ''} ${task.priority == 3 ? styles.arrow : ''} `} />
                             <p className={styles.tasktitle}>{task.title}</p>
+                            <button className={styles.edit} onClick={() => openEditMenu(task)}>
+                                <Icon name="edit" />
+                            </button>
                         </div>
                     ))}
                 </div>

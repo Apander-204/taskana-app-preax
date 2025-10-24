@@ -43,6 +43,7 @@
 
     /* Shadows */
 
+    --shadow-lg: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
     --shadow-base-hower: 2px 8px 12px 0px rgba(0, 0, 0, 0.25);
     --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -78,6 +79,7 @@
     --color-secondary-500: #B792FF;
 
     /* Shadows for dark theme */
+    --shadow-lg: 0px 0px 16px 8px rgba(0, 0, 0, 0.4);
     --shadow-base-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
     --shadow-base-hover: 2px 8px 12px 0px rgba(0, 0, 0, 0.8);
     --shadow-sm-default: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);

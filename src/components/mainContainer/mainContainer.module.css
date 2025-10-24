@@ -17,6 +17,8 @@
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     padding-block: 21px;
     top: 0px;
