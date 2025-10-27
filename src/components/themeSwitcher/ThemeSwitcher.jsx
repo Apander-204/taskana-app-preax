@@ -12,7 +12,7 @@ export default function ThemeSwitcher() {
     }
 
     return(
-        <button className={`${styles.layout} ${styles[theme]}`} tabIndex={0} onClick={switcher}>
+        <button className={`${styles.layout} ${styles[theme]}`} onClick={switcher}>
             <div className={styles.sun}>
                 <Icon name='sun' />
             </div>

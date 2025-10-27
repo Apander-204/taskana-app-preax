@@ -10,7 +10,6 @@
     flex-direction: column;
     flex: 1;
     width: calc(100vw - 604px);
-    min-height: 768px;
     min-width: 676px;
     max-width: 996px;
     padding-inline: 24px;

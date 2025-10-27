@@ -19,6 +19,7 @@ export default function DropDown({actualSort, setActualSort, tasks}) {
     const changeActualSort = (name) => {
         setActualSort(name);
         sortTasks(tasks, actualSort);
+        setMenuStyle('');
     };
 
     const [menuStyle, setMenuStyle] = useState('');

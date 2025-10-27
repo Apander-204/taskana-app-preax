@@ -7,9 +7,10 @@ export default function TaskList( {tasks, setAction, setActualTask, setVisible, 
     const openEditMenu = (task) => {
         setAction('edit');
         setActualTask(task);
-
         setVisible(true);
-    }
+    };
+
+
 
     return(
         <div className={styles.layout}>
@@ -27,7 +28,7 @@ export default function TaskList( {tasks, setAction, setActualTask, setVisible, 
             ) : (
                 <div className={styles.test}>
                     {tasks.slice().reverse().map(task => (
-                        <div className={styles.task} tabIndex={0}>
+                        <div className={`${styles.task} ${task == actualTask ? styles.activeTask : ''}`} tabIndex={0}>
                             <input type='checkbox' className={`${styles.checkbox} ${task.priority == 2 ? styles.chevron : ''} ${task.priority == 3 ? styles.arrow : ''} `} />
                             <p className={styles.tasktitle}>{task.title}</p>
                             <button className={styles.edit} onClick={() => openEditMenu(task)}>

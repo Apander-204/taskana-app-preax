@@ -7,7 +7,7 @@ export default function Footer() {
 
     return(
         <footer className={`${styles.footer} ${styles[theme]}`}>
-            <p className={styles.text}>Проект выполнен в рамках стажировки <a href='https://preax.ru/' className={styles.a} tabIndex={0}>PREAX</a></p>
+            <p className={styles.text}>Проект выполнен в рамках стажировки <a href='https://preax.ru/' className={styles.a} rel="noopener noreferrer" tabIndex={0}>PREAX</a></p>
         </footer>
     );
 }

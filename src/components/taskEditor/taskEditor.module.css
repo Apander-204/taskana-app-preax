@@ -53,6 +53,10 @@
     padding-right: 48px;
 }
 
+.input:focus-visible {
+    border: 2px solid var(--color-neutral-800);
+}
+
 .cross {
     width: 24px;
     height: 24px;
@@ -216,7 +220,7 @@
     outline: 2px solid var(--color-neutral-900);
 }
 
-.createbut:disabled {
+.createbut:disabled, .savebut:disabled {
     opacity: 0.5;
     box-shadow: var(--shadow-base-default);
 }

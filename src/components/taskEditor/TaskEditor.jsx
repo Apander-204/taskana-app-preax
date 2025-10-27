@@ -7,7 +7,15 @@ import { useState, useEffect } from 'react';
 export default function TaskEditor( {setTasks, setVisible, inputRef, action, actualTask, setActualTask, tasks, actualSort} ) {
 
     const [inputValue, setInputValue] = useState('');
-    const disableButton = inputValue.trim() == '';
+    const disableAddButton = inputValue.trim() == '';
+
+    const disableSaveButton = () => {
+        if (!actualTask) return true;
+
+        const hasChanges = inputValue !== actualTask.title || activeButton !== actualTask.priority;
+        const isEmpty = inputValue.trim() === '';
+        return !hasChanges || isEmpty;
+    };
 
     const addTask = () => {
         const now = new Date().toISOString();
@@ -27,11 +35,18 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
     const editTask = () => {
         const now = new Date().toISOString();
 
-        actualTask.title = inputValue;
-        actualTask.priority = activeButton;
-        actualTask.updatedAt = now;
+        const updatedTask = {
+            ...actualTask,
+            title: inputValue,
+            priority: activeButton,
+            updatedAt: now
+        };
 
-        setActualTask();
+        setTasks(prevTasks => prevTasks.map(task => 
+            task.id === actualTask.id ? updatedTask : task
+        ));
+
+        setActualTask(null);
         changeVisible();
         SortTasks(tasks, actualSort);
     };
@@ -41,7 +56,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
             return prev.filter(task => task.id !== actualTask.id);
         });
         
-        setActualTask();
+        setActualTask(null);
         changeVisible();
     };
 
@@ -51,6 +66,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
         setVisible(false);
         setInputValue('');
         setActiveButton(1);
+        setActualTask(null);
     }
 
     const crossClick = () => {
@@ -66,7 +82,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
             setInputValue('');
             setActiveButton(1);
         }
-    }, [action, actualTask])
+    }, [action, actualTask]);
 
     if(action=='create') {
         return(
@@ -97,7 +113,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
                     </div>
                 </div>
                 <div className={styles.buttons}>
-                    <button className={styles.createbut} disabled={disableButton} onClick={addTask}>Создать</button>
+                    <button className={styles.createbut} disabled={disableAddButton} onClick={addTask}>Создать</button>
                     <button className={styles.closebut} onClick={changeVisible}>Отмена</button>
                 </div>
             </div>
@@ -132,7 +148,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
                     </div>
                 </div>
                 <div className={styles.buttons}>
-                    <button className={styles.savebut} disabled={disableButton} onClick={editTask}>Сохранить</button>
+                    <button className={styles.savebut} disabled={disableSaveButton()} onClick={editTask}>Сохранить</button>
                     <button className={styles.closebut} onClick={changeVisible}>Отмена</button>
                     <button className={styles.deletebut} onClick={deleteTask}>
                         <Icon name="trash" />
