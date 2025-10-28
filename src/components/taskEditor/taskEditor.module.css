@@ -5,16 +5,23 @@
     height: 100%;
     background-color: var(--color-neutral-100);
     border-left: 1px solid var(--color-neutral-300);
-    overflow-y: auto;
+    overflow-y: visible;
 }
 
 .header {
     padding: 24px;
-    position: sticky;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    position: sticky;
     top: 0;
+}
+
+.contentContainer {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -54,7 +61,13 @@
 }
 
 .input:focus-visible {
-    border: 2px solid var(--color-neutral-800);
+    border: none;
+    outline: 2px solid var(--color-neutral-800);
+    outline-offset: 2px;
+}
+
+.crossnone {
+    display: none;
 }
 
 .cross {
@@ -150,7 +163,7 @@
     outline: 2px solid var(--color-neutral-900);
 }
 
-.item_two:active {
+.item_two.active {
     background-color: var(--color-secondary-0);
     box-shadow: var(--shadow-sm-default);
 }
@@ -167,7 +180,7 @@
     outline: 2px solid var(--color-neutral-900);
 }
 
-.item_three:active {
+.item_three.active {
     background-color: var(--color-primary-0);
     box-shadow: var(--shadow-sm-default);
 }
@@ -182,12 +195,10 @@
 
 .buttons {
     background-color: var(--color-neutral-100);
-    position: sticky;
     display: flex;
     align-items: center;
     width: 100%;
     padding: 16px 24px;
-    bottom: 0;
     border-top: 1px var(--color-neutral-300) solid;
 }
 

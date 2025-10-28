@@ -5,7 +5,7 @@ export default function NavBar() {
 
     return(
         <nav className={styles.layout}>
-            <a href="#" className={styles.incoming} tabIndex={0}>
+            <a href="#" className={styles.incoming}>
                 <Icon name='inbox' className={styles.icon} />
                 Входящие
             </a>

@@ -6,7 +6,7 @@
     display: flex;
     cursor: pointer;
     border: none;
-    width: 210px;
+    min-width: 210px;
     height: 40px;
     border-radius: 8px;
     background-color: var(--color-neutral-200);
@@ -28,6 +28,11 @@
     fill: var(--color-neutral-800);
 }
 
+.openmenu:focus-visible path, .itemicon {
+    fill: var(--color-neutral-800);
+}
+
+
 .openmenuactive .openmenutext {
     color: var(--color-neutral-800);
 }
@@ -38,6 +43,10 @@
 }
 
 .openmenu:hover .openmenutext {
+    color: var(--color-neutral-800);
+}
+
+.openmenu:focus-visible .openmenutext {
     color: var(--color-neutral-800);
 }
 

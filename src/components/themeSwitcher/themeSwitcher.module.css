@@ -33,7 +33,7 @@
     background-color: var(--color-primary-400);
 }
 
-.light .sun:hover {
+.light:hover .sun{
     transition: all 0.2s ease;
     background-color: var(--color-base-white);
 }
@@ -43,7 +43,7 @@
     fill: var(--color-base-white);
 }
 
-.light .sun:hover path {
+.light:hover .sun path {
     transition: all 0.2s ease;
     fill: var(--color-base-900);
 }
@@ -63,18 +63,17 @@
     background-color: var(--color-primary-400);
 }
 
-.dark .moon:hover {
+.dark:hover .moon {
     transition: all 0.2s ease;
     background-color: var(--color-base-white);
 }
-
 
 .dark .moon path {
     transition: all 0.2s ease;
     fill: var(--color-base-white);
 }
 
-.dark .moon:hover path {
+.dark:hover .moon path {
     transition: all 0.2s ease;
     fill: var(--color-base-900);
 }

@@ -1,3 +1,4 @@
+import LogoIcon from './icons/LogoIcon'
 import InboxIcon from './icons/InboxIcon'
 import LoadingIcon from './icons/LoadingIcon'
 import MoonIcon from './icons/MoonIcon'
@@ -23,6 +24,7 @@ import EditIcon from './icons/EditIcon'
 import TrashIcon from './icons/TrashIcon'
 
 export default function Icon({ name, ...props }) {
+    if (name == 'logo') return <LogoIcon {...props} />
     if (name == 'inbox') return <InboxIcon {...props} />
     if (name == 'loading') return <LoadingIcon {...props} />
     if (name == 'moon') return <MoonIcon {...props} />

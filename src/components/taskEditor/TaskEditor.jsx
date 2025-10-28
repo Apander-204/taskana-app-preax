@@ -12,7 +12,7 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
     const disableSaveButton = () => {
         if (!actualTask) return true;
 
-        const hasChanges = inputValue !== actualTask.title || activeButton !== actualTask.priority;
+        const hasChanges = inputValue.trim() !== actualTask.title || activeButton !== actualTask.priority;
         const isEmpty = inputValue.trim() === '';
         return !hasChanges || isEmpty;
     };
@@ -87,27 +87,29 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
     if(action=='create') {
         return(
             <div className={styles.layout}>
-                <div className={styles.header}>
-                    <h1 className={styles.title}>Создание задачи</h1>
-                    <div>
-                        <div className={styles.subtitle}>
-                            <p className={styles.p}>Название</p>
-                            <p className={styles.star}>*</p>
+                <div className={styles.contentContainer}>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>Создание задачи</h1>
+                        <div>
+                            <div className={styles.subtitle}>
+                                <p className={styles.p}>Название</p>
+                                <p className={styles.star}>*</p>
+                            </div>
+                            <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input} ref={inputRef} />
+                            <button className={`${inputValue.trim() !== "" ? styles.cross : styles.crossnone}`} onClick={crossClick}>
+                                <Icon name="cross" className={styles.crossimg} />
+                            </button>
                         </div>
-                        <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи'  className={styles.input} ref={inputRef} />
-                        <button className={styles.cross} onClick={crossClick}>
-                            <Icon name="cross" className={styles.crossimg} />
-                        </button>
                     </div>
-                </div>
-                <div className={styles.priority}>
-                    <div className={styles.main}>
-                        <div className={styles.content}>
-                            <p className={styles.prioryp}>Приоритет</p>
-                            <div className={styles.items}>
-                                <button className={`${styles.item_one} ${activeButton==1 ? styles.active : ''}`} onClick={() => setActiveButton(1)}><Icon name="minus"/></button>
-                                <button className={`${styles.item_two} ${activeButton==2 ? styles.active : ''}`} onClick={() => setActiveButton(2)}><Icon name="chevron"/></button>
-                                <button className={`${styles.item_three} ${activeButton==3 ? styles.active : ''}`} onClick={() => setActiveButton(3)}><Icon name="arrow"/></button>
+                    <div className={styles.priority}>
+                        <div className={styles.main}>
+                            <div className={styles.content}>
+                                <p className={styles.prioryp}>Приоритет</p>
+                                <div className={styles.items}>
+                                    <button className={`${styles.item_one} ${activeButton==1 ? styles.active : ''}`} onClick={() => setActiveButton(1)}><Icon name="minus"/></button>
+                                    <button className={`${styles.item_two} ${activeButton==2 ? styles.active : ''}`} onClick={() => setActiveButton(2)}><Icon name="chevron"/></button>
+                                    <button className={`${styles.item_three} ${activeButton==3 ? styles.active : ''}`} onClick={() => setActiveButton(3)}><Icon name="arrow"/></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,27 +124,29 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
     else{
         return(
             <div className={styles.layout}>
-                <div className={styles.header}>
-                    <h1 className={styles.title}>Редактирование</h1>
-                    <div>
-                        <div className={styles.subtitle}>
-                            <p className={styles.p}>Название</p>
-                            <p className={styles.star}>*</p>
+                <div className={styles.contentContainer}>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>Редактирование</h1>
+                        <div>
+                            <div className={styles.subtitle}>
+                                <p className={styles.p}>Название</p>
+                                <p className={styles.star}>*</p>
+                            </div>
+                            <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи' className={styles.input} ref={inputRef} />
+                            <button className={styles.cross} onClick={crossClick}>
+                                <Icon name="cross" className={styles.crossimg} />
+                            </button>
                         </div>
-                        <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Название задачи' className={styles.input} ref={inputRef} />
-                        <button className={styles.cross} onClick={crossClick}>
-                            <Icon name="cross" className={styles.crossimg} />
-                        </button>
                     </div>
-                </div>
-                <div className={styles.priority}>
-                    <div className={styles.main}>
-                        <div className={styles.content}>
-                            <p className={styles.prioryp}>Приоритет</p>
-                            <div className={styles.items}>
-                                <button className={`${styles.item_one} ${activeButton==1 ? styles.active : ''}`} onClick={() => setActiveButton(1)}><Icon name="minus"/></button>
-                                <button className={`${styles.item_two} ${activeButton==2 ? styles.active : ''}`} onClick={() => setActiveButton(2)}><Icon name="chevron"/></button>
-                                <button className={`${styles.item_three} ${activeButton==3 ? styles.active : ''}`} onClick={() => setActiveButton(3)}><Icon name="arrow"/></button>
+                    <div className={styles.priority}>
+                        <div className={styles.main}>
+                            <div className={styles.content}>
+                                <p className={styles.prioryp}>Приоритет</p>
+                                <div className={styles.items}>
+                                    <button className={`${styles.item_one} ${activeButton==1 ? styles.active : ''}`} onClick={() => setActiveButton(1)}><Icon name="minus"/></button>
+                                    <button className={`${styles.item_two} ${activeButton==2 ? styles.active : ''}`} onClick={() => setActiveButton(2)}><Icon name="chevron"/></button>
+                                    <button className={`${styles.item_three} ${activeButton==3 ? styles.active : ''}`} onClick={() => setActiveButton(3)}><Icon name="arrow"/></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -155,5 +159,6 @@ export default function TaskEditor( {setTasks, setVisible, inputRef, action, act
                     </button>
                 </div>
             </div>
-        );}
+        );
+    }
 }

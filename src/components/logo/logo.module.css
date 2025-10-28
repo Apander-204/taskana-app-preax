@@ -1,12 +1,17 @@
+.a {
+    display: flex;
+    align-items: center;
+    margin-left: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.a:focus {
+    outline: 2px solid var(--color-base-white);
+    outline-offset: 4px;
+}
+
 .logo {
     width: 126px;
     height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 7px;
-}
-
-.logo:focus {
-    outline: 2px solid var(--color-base-white);
-    outline-offset: 4px;
 }

@@ -72,6 +72,12 @@
     pointer-events: auto;
 }
 
+.checkbox:focus-visible ~ .edit {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 .checkbox {
     width: 20px;
     height: 20px;
@@ -141,6 +147,7 @@
 }
 
 .edit {
+    margin-left: 16px;
     transition: all 0.2s ease;
     opacity: 0;
     visibility: hidden;
@@ -176,6 +183,12 @@
 
 .edit:active {
     background-color: var(--color-neutral-100);
+}
+
+.edit:focus-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .edit:hover path {
