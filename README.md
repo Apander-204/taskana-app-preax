@@ -3,7 +3,7 @@
 <h3 align="center" ><b>Hello! This React app was created during an internship at the PREAX accelerator. It allows you to create tasks, set their priority, and sort them. It also features a theme switcher (light and dark).</b></h3>
 <h3 align="center" ><b>Demo Link: https://apander-204.github.io/taskana-app-preax/</b></h3>
 
-<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/e9ea5364-0fb1-4fe5-9596-f79c855a617c" />
+<img width="1919" height="917" alt="image" src="https://github.com/user-attachments/assets/5f2660f2-8ea7-412a-82fc-a725fc1a3cee" />
 
 ## ⚙️ Technology and skills
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
