@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Apander-204.github.io/taskana-app-preax",
+  "homepage": "https://Apander-204.github.io/taskana-app-preax/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
